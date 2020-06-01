@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+    height:100vh;
+    width:100vw;
+    grid-template-columns: [first] 10vw [line2] auto 10vw [end];
+    grid-template-rows: [row1-start] 15vh [row1-end] 75vh [main-line] auto [last-line];
+    grid-template-areas: 
+    "header header header"
+    "left-sidebar-base base right-sidebar-base"
+    "left-sidebar-pagination base-pagination right-sidebar-pagination"
+}
+
+.pagination {
+    grid-area: base-pagination;
+    justify-content: center;
+}
+
+.response-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: base
+}
+
+.row-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    height: 30vh;
+    width: 25vh
+}
+
+.card-img-top {
+    height: 50%
+}
+
+.card-title {
+    font-size: small;
+    overflow: hidden
+}
+
+.card-text {
+    font-size: small;
+    overflow: scroll;
+}
+
+.input-container {
+    grid-area: header
+}
+
+.page-items {
+    display: flex;
+}
